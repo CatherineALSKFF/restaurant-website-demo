@@ -1,5 +1,5 @@
 .app__aboutus {
-    position: relative;
+    position: relative;   
 }
 
 .app__aboutus-overlay {
@@ -79,3 +79,65 @@
         height: 320px;
     }
 }
+
+
+
+
+
+
+
+
+
+/* ANIMATION CODE */
+
+
+/* Initial styles */
+.app__aboutus-content_about, .app__aboutus-content_history {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  
+  .app__aboutus-content_knife {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  
+  /* Animation triggers when .animate class is added */
+  .app__aboutus-content.animate .app__aboutus-content_about,
+  .app__aboutus-content.animate .app__aboutus-content_history {
+    animation: slideIn 1s ease-out forwards;
+  }
+  
+  .app__aboutus-content.animate .app__aboutus-content_knife {
+    animation: dropIn 0.5s ease-out forwards;
+    animation-delay: 0.5s; /* Ensures it animates after the text */
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes dropIn {
+    0% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    60% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+
+  

@@ -67,6 +67,12 @@
     cursor: pointer;
 }
 
+.custom__button:hover {
+  transform: scale(1.05); /* Slightly increase size */
+  transition: transform 0.3s ease-in-out; /* Smooth transition */
+}
+
+
 .p__cormorant {
   font-family: var(--font-base);
   color: var(--color-white);

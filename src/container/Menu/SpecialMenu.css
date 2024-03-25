@@ -84,3 +84,36 @@
         line-height: 48.5px;
     }
 }
+
+
+
+/* ANIMATION */
+
+
+.app__specialMenu-menu_wine, .app__specialMenu-menu_cocktails, .app__specialMenu-menu_img {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  
+  .animate .app__specialMenu-menu_wine,
+  .animate .app__specialMenu-menu_cocktails {
+    animation: slideUp 0.5s ease-out forwards;
+    animation-delay: 0.3s; 
+  }
+  
+  .animate .app__specialMenu-menu_img {
+    animation: slideUp 0.5s ease-out forwards;
+    animation-delay: 0.6s; 
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
