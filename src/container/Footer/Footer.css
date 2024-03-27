@@ -103,3 +103,15 @@
         width: 80%;
     }
 }
+
+
+.reference-link{
+    color: var(--color-golden);
+    text-decoration: underline;
+}
+
+
+.reference-link:hover{
+    color: var(--color-white);
+   
+}
